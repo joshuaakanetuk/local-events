@@ -30,5 +30,4 @@ Requires an admin.
 - iCal subscribe support.
 - One page height fix for mobile (no scroll issue).
 
-### Made on [Glitch](https://glitch.com/)
 
