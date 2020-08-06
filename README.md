@@ -32,7 +32,3 @@ Requires an admin.
 
 ### Made on [Glitch](https://glitch.com/)
 
-[![](https://img.shields.io/static/v1?label=MADE%20IN&message=&color=lightblue)](http://google.com)
-
-\ ゜o゜)ノ
-
