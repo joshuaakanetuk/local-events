@@ -1,0 +1,20 @@
+html
+  block header
+style
+    include ../public/add.css
+div(id="content")
+  header
+    span(id="" onclick="javascript:(window.location='/')")= "Local Events" 
+      br 
+      . 
+        <small>#{name}</small>
+    span(style="text-align: right" onclick="javascript:(window.location='/admin')")= userStatus
+  form(id="eve")
+    input(type="text" value="" placeholder="Name of Event")
+    input(type="date" value="" )
+    input(type="text" value="" placeholder="Location of Event")
+    input(type="text" value="" placeholder="Link of Event")
+    input(type="file" value="" placeholder="")
+    //input(type="file" value="" placeholder="")
+    button(type="submit") Submit
+script(src="add.js")

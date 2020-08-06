@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+      * {
+        box-sizing: border-box;
+      }
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        font-family: 'Inter';
+      }
+      body {
+        display:flex;
+      }
+      input {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class=""
+      style="margin: auto; border:1px solid; padding:20px; text-align:center;"
+    >
+      <form
+        action="/login"
+        method="post"
+        style="margin: auto;"
+      >
+        <div>
+          <label>Username:</label>
+          <br>
+          <br>
+          <input type="text" name="username" autofocus/>
+          <br>
+          <br>
+          <label>Password:</label>
+          <br>
+          <br>
+          <input type="password" name="password" />
+          <br>
+          <br>
+          <input type="submit" value="Log In" />
+          <br>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

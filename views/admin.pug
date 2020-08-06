@@ -1,0 +1,43 @@
+html
+  head
+    include ../particals/meta.pug
+  style
+      include ../public/add.css
+
+body
+  div(id="content")
+    header
+      span(id="" onclick="javascript:(window.location='/')")= "Local Events" 
+        br 
+        . 
+          <small>#{name}</small>
+      span(style="text-align: right" onclick="javascript:(window.location='/logout')") Logout
+    h2 Edit Events
+    div(id="dreams")
+      each event in events
+        - var date = new Date(event.start_time *1000)
+        - var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        div(class="card" id=event.id)
+          div(class="card-body")
+            h2(name="name" contenteditable="true")= event.name
+            h6(name="location" contenteditable="true")= event.location
+            div(style="display: flex;")
+              | Start Time: 
+              input(type="date" name="start_time" style="width: auto; border: none; padding: 0;" value=(date.getFullYear() + '-' + ('0' + date.getMonth()).slice(-2) + '-' + ('0' + (date.getDate())).slice(-2)))
+              input(type="time" name="start_time" style="width: auto; border: none; padding: 0;" value=(date.getHours() + ":" + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + (date.getSeconds())).slice(-2)))
+            div(style="display: flex;")
+              | End Time: 
+              input(type="date" name="end_time" style="width: auto; border: none; padding: 0;" value=(date.getFullYear() + '-' + ('0' + date.getMonth()).slice(-2) + '-' + ('0' + (date.getDate())).slice(-2)))
+              input(type="time" name="end_time" style="width: auto; border: none; padding: 0;" value=(date.getHours() + ":" + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + (date.getSeconds())).slice(-2)))  
+            
+            pre(contenteditable="true" name="description")=event.description 
+            - var status_text = ((event.status == 1) ? 'Active' : 'Disabled')
+            span=status_text
+            br
+            br
+            button(onclick="deleteThing()")= "Delete"
+            br
+            br
+            button(onclick="statusThing()")= "Update"
+  script(src="/admin.js")
+  script feather.replace({ width: '15', height: '15', class: feather});

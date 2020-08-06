@@ -1,0 +1,179 @@
+/* CSS files add styling rules to your content */
+
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Inter, sans-serif, helvetica;
+}
+
+small {
+  font-weight: 200;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+}
+
+
+#content {
+  padding: 27px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  padding-right: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+}
+
+/* Handle on hover 
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} */
+
+
+header {
+  display: flex;
+  height: 50px;
+}
+
+header span {
+  vertical-align: top;
+  font-weight: bolder;
+}
+
+span {
+  width: 50%;
+} 
+
+a {
+  width: 100%;
+  padding: .93em 0;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
+}
+
+svg {
+  width: 15px;
+  height: 15px;
+}
+
+li {
+  width: 100%;
+  border-bottom: black 1px solid;
+}
+
+a, .head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  background: black;
+  color: white;
+}
+
+
+.head {
+  font-weight: bolder;
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+
+#list {
+}
+
+.date {
+  width: 15%;
+  padding-left: .5em;
+}
+.title {
+  width: 40%;
+  padding: 0 .5em;
+}
+
+.text {
+  width: 40%;
+}
+
+.link {
+  width: 5%; 
+}
+
+a > div {
+  font-size: .7em;
+  
+}
+
+.add {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  font-size: 12px;
+}
+.add:hover {
+  background: black;
+  color: white
+}
+.add > div {
+  margin: auto;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  height: 3.5rem;            /* Footer height */
+  margin-top: 1rem;
+  font-size: 12px;
+  float: right;
+}
+
+footer svg {
+  margin-left: 5px;
+}
+
+.icons {
+  vertical-align: bottom;
+  margin-right: 5px;
+  
+}
+
+* {
+
+}

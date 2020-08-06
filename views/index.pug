@@ -1,0 +1,48 @@
+//- index.pug
+//doctype html
+html
+  head
+    include ../particals/meta.pug
+  style
+      include ../public/style.css
+div(id="content")
+  header
+    span(onclick="javascript:(window.location='/')")= "Local Events (BETA)" 
+      br 
+      . 
+        <small>#{name}</small>
+    span(style="text-align: right" onclick="javascript:(window.location='/admin')")= userStatus
+  h2 Events
+  ul
+    li(class="row head")
+      div(class="date") Date
+      div(class="title") Location
+      div(class="text") Name of Event
+      div(class="link")
+    div(id="list")
+      each val in events
+        - var date = new Date(val.start_time *1000)
+        - var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        li(class="row")
+          a(href=val.event_url)
+            div(class="date")= months[date.getMonth()].substring(0, 3) + " " + date.getDate()
+            div(class="title")= val.location
+            div(class="text")= val.name
+            div(class="link")
+              if val.event_url
+                i(data-feather="external-link")
+              else
+      li(class="row")
+        a(href="/add")
+          div 
+            i(data-feather="plus-square")
+            .
+               Add Event 
+  //div(class="add" onclick="alert('x')") 
+  //    div ADD
+  footer 
+      i(data-feather="mail")
+      i(data-feather="rss")
+      
+  
+script feather.replace({ width: '15', height: '15', class: feather});

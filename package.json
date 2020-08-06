@@ -1,0 +1,36 @@
+{
+  "name": "local-events",
+  "version": "0.0.6",
+  "description": "📅 Host your local organization's events. No excuses about events booked on the same day.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "sqlite3": "^4.0.0",
+    "uuid": "^3.3.2",
+    "passport-local": "^1.0.0",
+    "passport": "^0.4.0",
+    "express-session": "^1.16.1",
+    "connect-ensure-login": "^0.1.1",
+    "pug": "^2.0.3",
+    "multer": "^1.4.2",
+    "ical-generator": "^1.8.1",
+    "moment": "^2.24.0"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://https://glitch.com/edit/#!/join/a4054170-003c-441a-a095-e6421c93460f"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express",
+    "events",
+    "calendar"
+  ]
+}

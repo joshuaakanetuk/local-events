@@ -1,0 +1,67 @@
+html
+  head
+    include ../particals/meta.pug
+    style
+        include ../public/add.css
+body
+  div(id="content")
+    header
+      span(id="" onclick="javascript:(window.location='/')")= "Local Events" 
+        br 
+        . 
+          <small>#{name}</small>
+      span(style="text-align: right" onclick="javascript:(window.location='/admin')")= userStatus
+    h2 Add Event
+    img(id="imgInp" style="width: 100%")
+    form(id="eve" method="POST" action="/postEvents" enctype="multipart/form-data" style="margin-top: 5px") 
+      div(class="form-group" )
+        div(class="input-text" )
+          i(data-feather="info")
+          | Name of Event* 
+        input(type="text" required name="name" placeholder="Name of Event" style="")
+      div(class="form-group")  
+        div(class="input-text")
+          i(data-feather="align-left")
+          | Description of Event* 
+        textarea(rows="4" required cols="30" name="description" )
+      div(class="form-group")  
+        div(class="input-text")
+          i(data-feather="map-pin")
+          | Location
+        input(type="text" name="location" placeholder="Location of Event")
+      div(class="form-group")  
+        div(class="input-text" )
+          i(data-feather="link")
+          | Link
+        input(type="url" name="event_url" placeholder="Link of Event")
+      div(class="form-group")  
+        div(class="input-text" )
+          i(data-feather="clock")
+          | Start Time: 
+        input(type="date" required id="date" placeholder="Date" style="border-right: none;width: 50%" name="start_time")
+        input(type="time" required id="time" placeholder="Time" style="width: 50%" name="start_time")
+      div(class="form-group")  
+        div(class="input-text" )
+          i(data-feather="clock")
+          | End Time: 
+        input(type="date" required id="date" placeholder="Date" style="border-right: none;width: 50%" name="end_time")
+        input(type="time" required id="time" placeholder="Time" style="width: 50%" name="end_time")
+      div(class="form-group")  
+        div(class="input-text" )
+          i(data-feather="mail")
+          | Contact Email
+        input(type="email" name="contact" placeholder="Contact Email")
+      div(class="form-group")  
+        div(class="input-text" )
+          i(data-feather="image")
+          | Image
+        input(type="file" name="file" id="blah")
+      button(type="submit") Submit
+  script(src="add.js")
+  script feather.replace({ width: '15', height: '15', class: feather});
+
+  //| Description of Event
+      br
+      textarea(rows="4" cols="50" name="date" )
+      br
+      br
